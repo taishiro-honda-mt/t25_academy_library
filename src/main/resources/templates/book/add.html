@@ -13,13 +13,35 @@
         <div class="main_contents">
             <div th:replace="~{common :: header}"></div>
             <div class="inner_contens">
+                
                 <div class="page_title">書籍登録</div>
                 <div class="page_contents">
                     <form id="book_register_form" th:object="${bookMstDto}" th:action="@{/book/add}" method="post">
+                        
+                        <h4 style="color:red">*は必須項目です</h4>
+                        <h3>書籍名<span style="color:red;">*</span></h3>
+                        <input type = "text" name= "title" th:field="*{title}"placeholder="書籍名を入力">
+                        <div th:if = "${errTitleList}">
+                            <ul>
+                                <li th:each = "msg :${errTitleList}" th:text="${msg}" style="color:red"></li>
+                            </ul>
+                        </div>
+                    
+                        <h3>ISBN<span style="color:red;">*</span></h3>
+                        <input type = "text" name= "isbn" th:field="*{isbn}"placeholder="ISBNを入力">
+                        <div th:if = "${errIsbnList}">
+                            <ul>
+                                <li th:each = "msg :${errIsbnList}" th:text="${msg}" style="color:red"></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <button type = "submit">保存</button>
                         <div class="mb30 flexarea">
+                           
                             <span>
                                 <a th:href="@{/book/index}" class="link">← 一覧へ戻る</a>
                             </span>
+
                         </div>
                     </form>
                 </div>

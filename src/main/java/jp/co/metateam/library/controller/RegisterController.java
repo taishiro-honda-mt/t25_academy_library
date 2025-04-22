@@ -63,7 +63,7 @@ public class RegisterController {
             if (errEmailFlg || errEmpIdFlg) {
                 throw new Exception("Account already exists.");
             }
-
+//↓が大切！！
             accountService.save(accountDto);
 
             return "redirect:login";
