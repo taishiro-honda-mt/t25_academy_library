@@ -137,7 +137,7 @@ public class BookController {
 
 
         bookMstService.save(bookMstDto);
-        ra.addFlashAttribute("successMessage","書籍を登録しました");
+        
 
             return "redirect:/book/index";
         }
