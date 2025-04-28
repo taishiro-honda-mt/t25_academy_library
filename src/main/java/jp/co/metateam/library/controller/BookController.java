@@ -130,12 +130,6 @@ public class BookController {
 
 
 
-
-
-
-
-
-
         bookMstService.save(bookMstDto);
         
 
@@ -143,6 +137,4 @@ public class BookController {
         }
     }
     
-//ここに新しく追加する　PostMappingPostMapping　　保存されたらIndex.htmlへ移動したい
-// return "redirect:login";
 

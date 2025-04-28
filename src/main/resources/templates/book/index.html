@@ -12,6 +12,29 @@
             <div th:replace="~{common :: header}"></div>
             <div class="inner_contens">
                 <div class="page_title">書籍一覧</div>
+
+
+                
+                <button type = "button" onclick="window.location.href = 'http://localhost:8080/mt_library/book/add'">書籍登録</button>
+                <h1>書籍一覧</h1>
+
+                <table class= "books_table" >
+                    <tr>
+                        <th>書籍名</th>
+                        <th>ISBN</th>
+                    </tr>
+                    <tr th:each="book:${bookMstList}">
+                        <td th:text="${book.title}">書籍名</td>
+                        <td th:text="${book.isbn}">ISBN</td>
+                        
+                    </tr>
+                </table>
+
+
+
+
+
+
             </div>
         </div>
     </div>
