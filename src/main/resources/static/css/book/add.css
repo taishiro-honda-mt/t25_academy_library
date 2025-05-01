@@ -6,6 +6,12 @@
   font-size: 14px;
   margin-left: 5px;
   margin-top: -5px;
+  color: red;
+}
+
+.back_link{
+  text-align: right;
+  margin-top: 20px;
 }
 
 #book_register_form .form_input {

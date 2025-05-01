@@ -53,8 +53,6 @@ public class BookController {
     }
     
 
-
-//ここから
 @PostMapping("/book/add")
         public String addbook(@Valid @ModelAttribute BookMstDto bookMstDto, BindingResult result, RedirectAttributes ra,Model model) {
 
@@ -63,9 +61,6 @@ public class BookController {
 
             boolean errTitleFlg = false;
             boolean errIsbnFlg = false;
-            // boolean errIsbnnullFlg = false;
-            // boolean errIsbncharacount = false;
-            // boolean errIsbncharatype= false;
 
             List<String> errTitleList = new ArrayList<>();  // エラーメッセージのリスト
             List<String> errIsbnList = new ArrayList<>();
@@ -127,8 +122,6 @@ public class BookController {
             return "book/add";
             
         }
-
-
 
         bookMstService.save(bookMstDto);
         
