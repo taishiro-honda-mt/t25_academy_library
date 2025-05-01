@@ -30,25 +30,3 @@ public class BookMstDto {
 
     private BookMst bookMst;
 }
-
-
-// public class AccountDto {
-
-//     @NotEmpty(message = "社員番号は必須です")
-//     @Size(max = 50)
-//     private String employeeId;
-
-//     @NotEmpty(message = "氏名は必須です")
-//     @Size(max = 255)
-//     private String name;
-
-//     @NotEmpty(message = "メールアドレスは必須です")
-//     @Email(message = "メールアドレスの形式が不正です")
-//     private String email;
-
-//     @NotEmpty(message = "パスワードは必須です")
-//     @Size(min = 5, message="パスワードは5文字以上で入力してください")
-//     private String password;
-
-//     private Integer authorizationType = 1;
-// }

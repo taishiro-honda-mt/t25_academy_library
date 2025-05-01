@@ -1,13 +1,14 @@
 .books_table {
- width: 100%;
+ width: 60%;
  text-align: left;
  border-collapse: collapse;
  border-spacing: 0;
  border-radius:10px;
+ margin: 20px auto;/*中央寄せ*/
 }
 
 .books_table th{
-  padding: 10px;
+  padding: 13px;
   background: rgba(0,0,0,0.06);
   padding: 13px;
   border: solid 1px #B9B9B9;
@@ -21,13 +22,22 @@
   background: #FFFFFF;
   border: solid 1px #B9B9B9;
   padding: 13px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .books_table td:nth-child(1){
-  width: 40%;
+  width: 50%;
 }
 
+/*書籍登録ボタンのスタイル*/
+.book_register_btn{
+  background-color: #84dda9;
+  color: white;
+  padding: 10px 20px;
+  font: size 16px;border:none;
+  border-radius: 6px;
+  margin: 20px 0;
+}
 .books_table td:nth-child(1) .book_title_contents{
   display: flex;
   align-items: center;

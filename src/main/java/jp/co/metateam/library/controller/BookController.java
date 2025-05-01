@@ -53,8 +53,6 @@ public class BookController {
     }
     
 
-
-//ここから
 @PostMapping("/book/add")
         public String addbook(@Valid @ModelAttribute BookMstDto bookMstDto, BindingResult result, RedirectAttributes ra,Model model) {
 
@@ -63,9 +61,6 @@ public class BookController {
 
             boolean errTitleFlg = false;
             boolean errIsbnFlg = false;
-            // boolean errIsbnnullFlg = false;
-            // boolean errIsbncharacount = false;
-            // boolean errIsbncharatype= false;
 
             List<String> errTitleList = new ArrayList<>();  // エラーメッセージのリスト
             List<String> errIsbnList = new ArrayList<>();
@@ -128,14 +123,6 @@ public class BookController {
             
         }
 
-
-
-
-
-
-
-
-
         bookMstService.save(bookMstDto);
         
 
@@ -143,6 +130,4 @@ public class BookController {
         }
     }
     
-//ここに新しく追加する　PostMappingPostMapping　　保存されたらIndex.htmlへ移動したい
-// return "redirect:login";
 
